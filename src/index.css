@@ -1,0 +1,305 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Terminal Portfolio Design System - Dark theme with monospace aesthetics */
+
+@layer base {
+  :root {
+    /* Light Theme Colors (Default) */
+    --terminal-bg: 0 0% 100%; /* White background */
+    --terminal-fg: 0 0% 20%; /* Dark text */
+    --terminal-green: 120 60% 40%; /* Darker green for light theme */
+    --terminal-blue: 210 60% 40%; /* Darker blue for light theme */
+    --terminal-yellow: 45 80% 50%; /* Darker yellow for light theme */
+    --terminal-red: 0 70% 50%; /* Darker red for light theme */
+    --terminal-purple: 290 60% 40%; /* Darker purple for light theme */
+    --terminal-cyan: 180 60% 40%; /* Darker cyan for light theme */
+    --terminal-gray: 0 0% 45%; /* Dark gray for light theme */
+
+    /* Semantic tokens mapped to terminal colors */
+    --background: var(--terminal-bg);
+    --foreground: var(--terminal-fg);
+
+    --card: var(--terminal-bg);
+    --card-foreground: var(--terminal-fg);
+
+    --popover: var(--terminal-bg);
+    --popover-foreground: var(--terminal-fg);
+
+    --primary: var(--terminal-green);
+    --primary-foreground: var(--terminal-bg);
+
+    --secondary: var(--terminal-gray);
+    --secondary-foreground: var(--terminal-fg);
+
+    --muted: var(--terminal-gray);
+    --muted-foreground: 0 0% 60%;
+
+    --accent: var(--terminal-blue);
+    --accent-foreground: var(--terminal-bg);
+
+    --destructive: var(--terminal-red);
+    --destructive-foreground: var(--terminal-bg);
+
+    --border: 0 0% 85%;
+    --input: 0 0% 95%;
+    --ring: var(--terminal-green);
+
+    --radius: 0rem;
+
+    /* Terminal specific colors */
+    --prompt-user: var(--terminal-green);
+    --prompt-host: var(--terminal-blue);
+    --prompt-path: var(--terminal-yellow);
+    --prompt-symbol: var(--terminal-fg);
+    --cursor: var(--terminal-fg);
+    --command: var(--terminal-fg);
+    --output: var(--terminal-fg);
+    --error: var(--terminal-red);
+    --success: var(--terminal-green);
+    --info: var(--terminal-cyan);
+    --warning: var(--terminal-yellow);
+
+    /* Animation timing */
+    --cursor-blink: 1.2s;
+    --type-speed: 0.1s;
+    --boot-delay: 0.5s;
+  }
+
+  .dark {
+    /* Dark Theme Colors */
+    --terminal-bg: 216 7% 12%; /* Dark background */
+    --terminal-fg: 0 0% 100%; /* White text */
+    --terminal-green: 120 100% 75%; /* Bright green for dark theme */
+    --terminal-blue: 210 100% 70%; /* Bright blue for dark theme */
+    --terminal-yellow: 51 100% 80%; /* Bright yellow for dark theme */
+    --terminal-red: 0 100% 75%; /* Bright red for dark theme */
+    --terminal-purple: 290 100% 75%; /* Bright purple for dark theme */
+    --terminal-cyan: 180 100% 75%; /* Bright cyan for dark theme */
+    --terminal-gray: 220 13% 50%; /* Gray for dark theme */
+
+    /* Override semantic tokens for dark theme */
+    --background: var(--terminal-bg);
+    --foreground: var(--terminal-fg);
+
+    --card: var(--terminal-bg);
+    --card-foreground: var(--terminal-fg);
+
+    --popover: var(--terminal-bg);
+    --popover-foreground: var(--terminal-fg);
+
+    --primary: var(--terminal-green);
+    --primary-foreground: var(--terminal-bg);
+
+    --secondary: var(--terminal-gray);
+    --secondary-foreground: var(--terminal-fg);
+
+    --muted: var(--terminal-gray);
+    --muted-foreground: 220 13% 70%;
+
+    --accent: var(--terminal-blue);
+    --accent-foreground: var(--terminal-bg);
+
+    --destructive: var(--terminal-red);
+    --destructive-foreground: var(--terminal-bg);
+
+    --border: 220 13% 25%;
+    --input: 220 13% 20%;
+    --ring: var(--terminal-green);
+
+    /* Terminal specific colors for dark theme */
+    --prompt-user: var(--terminal-green);
+    --prompt-host: var(--terminal-blue);
+    --prompt-path: var(--terminal-yellow);
+    --prompt-symbol: var(--terminal-fg);
+    --cursor: var(--terminal-fg);
+    --command: var(--terminal-fg);
+    --output: var(--terminal-fg);
+    --error: var(--terminal-red);
+    --success: var(--terminal-green);
+    --info: var(--terminal-cyan);
+    --warning: var(--terminal-yellow);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono;
+    font-family: "JetBrains Mono", "Fira Code", "Consolas", "Monaco", monospace;
+  }
+
+  /* Terminal-specific styles */
+  .terminal-cursor {
+    @apply inline-block bg-cursor;
+    width: 0.6em;
+    height: 1.2em;
+    animation: blink var(--cursor-blink) infinite;
+  }
+
+  .terminal-prompt-user {
+    color: hsl(var(--prompt-user));
+  }
+
+  .terminal-prompt-host {
+    color: hsl(var(--prompt-host));
+  }
+
+  .terminal-prompt-path {
+    color: hsl(var(--prompt-path));
+  }
+
+  .terminal-output {
+    color: hsl(var(--output));
+  }
+
+  .terminal-error {
+    color: hsl(var(--error));
+  }
+
+  .terminal-success {
+    color: hsl(var(--success));
+  }
+
+  .terminal-info {
+    color: hsl(var(--info));
+  }
+
+  .terminal-warning {
+    color: hsl(var(--warning));
+  }
+
+  .terminal-blue {
+    color: hsl(var(--terminal-blue));
+  }
+
+  .terminal-cyan {
+    color: hsl(var(--terminal-cyan));
+  }
+
+  .terminal-purple {
+    color: hsl(var(--terminal-purple));
+  }
+
+  .terminal-gray {
+    color: hsl(var(--terminal-gray));
+  }
+
+  @keyframes blink {
+    0%,
+    50% {
+      opacity: 1;
+    }
+    51%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes typeIn {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  .boot-animation {
+    animation: fadeIn 2s ease-out forwards;
+  }
+
+  .type-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid hsl(var(--cursor));
+    animation: typeIn 3s steps(30) forwards, blink 1s infinite;
+  }
+
+  /* Scrollbar styling for terminal */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--terminal-bg));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--terminal-gray));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--terminal-fg) / 0.7);
+  }
+}
+
+/* Matrix effect and animations */
+.matrix-effect {
+  background: black;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.matrix-line {
+  animation: matrix-fall 2s linear infinite;
+  animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes matrix-fall {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.terminal-cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Loading animation */
+.terminal-loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid hsl(var(--terminal-fg) / 0.3);
+  border-radius: 50%;
+  border-top-color: hsl(var(--terminal-fg));
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

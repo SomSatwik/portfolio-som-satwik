@@ -1,0 +1,58 @@
+{
+  "name": "Som Satwik Deo",
+  "location": "India",
+  "education": "B.Tech in Computer Science Engineering (2024–2028)",
+  "focus": ["Software Development", "Real-time Systems", "Cybersecurity", "AI/Agents", "Artificial Life", "Emergent Systems"],
+  "hobbies": ["Exploring cellular automata", "Building ambitious projects", "Open source contribution", "Reading about emergent systems"],
+  "projects": [
+    {
+      "name": "CyberBattleground",
+      "description": "Competitive real-time cybersecurity platform. 3v3 Red Team vs Blue Team combat, real CVE-based challenges, Docker sandboxes, WebSocket scoreboard, 6-tier ranking, Stripe monetization.",
+      "tech": ["Next.js", "TypeScript", "Docker", "WebSocket", "Stripe"],
+      "url": "https://github.com/SomSatwik/CyberBattleground",
+      "stars": "18+"
+    },
+    {
+      "name": "Bus Tracker (realtime-tracker)",
+      "description": "Real-time bus tracking system with role-based access control, Socket.io live updates, CRUD API endpoints for students, courses and departments.",
+      "tech": ["Node.js", "Socket.io", "MongoDB", "Leaflet.js", "Kotlin"],
+      "url": "https://github.com/SomSatwik/realtime-tracker"
+    },
+    {
+      "name": "Cellular Automaton / Emergent Systems",
+      "description": "A cellular automaton engine inspired by Conway's Game of Life, simulating emergent behavior from simple local rules such as birth, death and survival conditions.",
+      "tech": ["TypeScript", "JavaScript"],
+      "url": null
+    }
+  ],
+  "experience": [
+    {
+      "role": "Open Source Developer",
+      "org": "GSSoC-2026",
+      "period": "May 2026 – July 2026",
+      "details": "Selected as Contributor for Open Source Track and AI/Agents Track. Earned 5 badges: AI Agents, Open Source, Contributor, Bounty Hunter, Point Scorer."
+    },
+    {
+      "role": "App Development Lead",
+      "org": "Code Communicators Club",
+      "period": "October 2025 – Present",
+      "details": "Organized 3+ workshops with 200+ participants. Focused on technical skill development and team management."
+    }
+  ],
+  "skills": {
+    "languages": ["TypeScript", "JavaScript", "Kotlin", "Java", "SQL"],
+    "frameworks": ["Express.js", "Node.js", "React.js", "Next.js", "React Native"],
+    "tools": ["Git", "GitHub", "Tailwind CSS", "MongoDB", "Redis", "TensorFlow", "Supabase", "Docker", "Socket.io"]
+  },
+  "achievements": [
+    "GSSoC 2026 – Selected for Open Source + AI/Agents Track, earned 5 badges",
+    "HackerRank – 5 Stars in Java",
+    "Learnathon 4.0 Winner – Project: Foodify (ML model for food waste prediction)"
+  ],
+  "contact": {
+    "github": "https://github.com/SomSatwik",
+    "linkedin": "https://linkedin.com/in/som-satwik-deo",
+    "email": "ssomsatwikdeo@gmail.com",
+    "phone": "8511766395"
+  }
+}
