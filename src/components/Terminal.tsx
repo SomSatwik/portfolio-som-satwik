@@ -647,6 +647,12 @@ const PORTFOLIO_CMDS: Record<string, () => React.ReactNode> = {
           </a>
         </div>
         <div>
+          <span className="terminal-warning">Instagram:</span>
+          <a href="https://www.instagram.com/som.7wik/" target="_blank" rel="noopener noreferrer" className="ml-2 terminal-blue hover:underline">
+            instagram.com/som.7wik
+          </a>
+        </div>
+        <div>
           <span className="terminal-warning">LinkedIn:</span>
           <a href="https://linkedin.com/in/som-satwik-deo" target="_blank" rel="noopener noreferrer" className="ml-2 terminal-blue hover:underline">
             linkedin.com/in/som-satwik-deo
