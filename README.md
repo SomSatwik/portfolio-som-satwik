@@ -103,7 +103,7 @@ This portfolio features an integrated AI assistant named **Shadow** powered by G
 
 ```bash
 # Clone the repository
-git clone https://github.com/utkarsh/terminal-portfolio.git
+git clone https://github.com/SomSatwik/portfolio-som-satwik.git
 cd terminal-portfolio
 
 # Install dependencies
@@ -200,20 +200,12 @@ Runs ESLint to check code quality
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## About the Developer
-
-**Utkarsh** is a passionate BCA student from India, specializing in:
-
-- Machine Learning & AI
-- Robotics & Automation
-- Web Development
-- IoT & Smart Systems
 
 ### Contact
 
-- **Email**: utkarsh@example.com
-- **GitHub**: [github.com/utkarsh](https://github.com/utkarsh)
-- **LinkedIn**: [linkedin.com/in/utkarsh](https://linkedin.com/in/utkarsh)
+- **Email**: ssomsatwikdeo@gmail.com
+- **GitHub**: [github.com/utkarsh](https://github.com/SomSatwik)
+
 
 ## Acknowledgments
 
