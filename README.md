@@ -204,7 +204,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### Contact
 
 - **Email**: ssomsatwikdeo@gmail.com
-- **GitHub**: [github.com/utkarsh](https://github.com/SomSatwik)
+- **GitHub**: [github.com/SomSatwik](https://github.com/SomSatwik)
 
 
 ## Acknowledgments
